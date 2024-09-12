@@ -49,9 +49,9 @@ for (int i = 0; i < images.Count(); i++)
     }
     var image = images[i];
     htmlBuilder.Append($"<td class='{tdStyle}'>");
-    htmlBuilder.Append($"<img class='{imgStyle}' src='data:image/png;base64, {GetBase64(image.FullName)}' /> <br>");
-    htmlBuilder.Append($"{image.Name}<br>");
-    htmlBuilder.Append($"<a href='{diskPath + imageUrl}'>{imageUrl}");
+    htmlBuilder.Append($"<div style='text-align:center;'><img class='{imgStyle}' src='data:image/png;base64, {GetBase64(image.FullName)}' /></div><br>");
+    htmlBuilder.Append($"Название: {image.Name}<br>");
+    htmlBuilder.Append($"Ссылка: <a href='{diskPath + imageUrl}'>{diskPath + imageUrl}");
     htmlBuilder.Append("</td>");
 
     count++;
